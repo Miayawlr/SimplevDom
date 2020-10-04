@@ -2,7 +2,7 @@ import Element from './Element'
 function createElement(type, props, children) {
   return new Element(type, props, children)
 }
-
+// 创建节点
 function setAttrs(node, prop, value) {
   switch (prop) {
     case 'value':
@@ -20,7 +20,7 @@ function setAttrs(node, prop, value) {
       break
   }
 }
-
+// 渲染
 function render(virtualDom) {
   const { type, props, children } = virtualDom
   const el = document.createElement(type)
